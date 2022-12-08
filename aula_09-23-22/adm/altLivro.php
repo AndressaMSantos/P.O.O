@@ -26,15 +26,15 @@ include_once "../servidor.php";
 
             <?php
 
-//pegar id
+
 $id = $_GET["cod_liv"];
-//query
+
 $sql = " SELECT * FROM tb_livro WHERE cod_liv =" . $id;
-//executar
+
 //$resposta = mysqli_query($banco, $sql);
 
 $resposta = $OOP->query($sql);
-//colocar os campos
+
 //$campo = mysqli_fetch_array($resposta);
 
 $campo = $resposta->fetch_array();
@@ -64,7 +64,7 @@ $campo = $resposta->fetch_array();
                             <label for="ed">Editora: </label>
 
                             <?php
-//query
+
 $sqlEditora = "SELECT * FROM tb_editora ";
 
 //executar
